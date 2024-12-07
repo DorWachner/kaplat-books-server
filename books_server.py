@@ -202,9 +202,8 @@ class BookStoreHandler(BaseHTTPRequestHandler):
         return filtered_books
 
 def run_server():
-    server_address = ('', 8574)
+    server_address = ('', 80)
     httpd = HTTPServer(server_address, BookStoreHandler)
-    print('Starting server on port 8574...')
     httpd.serve_forever()
 
 if __name__ == '__main__':
