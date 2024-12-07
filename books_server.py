@@ -202,11 +202,10 @@ class BookStoreHandler(BaseHTTPRequestHandler):
         return filtered_books
 
 def run_server():
-    server_address = ('0.0.0.0', 80)  # מאזין על כל הכתובות, בפורט 80
+    server_address = ('', 8574)
     httpd = HTTPServer(server_address, BookStoreHandler)
-    print('Starting server on port 80...')
+    print('Starting server on port 8574...')
     httpd.serve_forever()
-
 
 if __name__ == '__main__':
     run_server()
